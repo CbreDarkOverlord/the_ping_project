@@ -2,7 +2,7 @@ import openpyxl
 from ping3 import ping
 
 # Open the Excel file and select the sheet containing the server names
-workbook = openpyxl.load_workbook('no access to server - Jan-2023.xlsx')
+workbook = openpyxl.load_workbook('RemTA March 2023.xlsx')
 sheet = workbook['Sheet1']
 
 # Loop through each row in the sheet, and ping each server in turn
@@ -21,4 +21,4 @@ for i, server_name in enumerate(values):
         sheet.cell(row=i+1, column=3).value = response_time
 
 # save all the hawtness to the spreadsheet and crack a cold one mate, yer job's done
-workbook.save('no access to server - Jan-2023.xlsx')
+workbook.save('RemTA March 2023.xlsx')
